@@ -8,15 +8,25 @@ class Robot{
     public:
         //Constructors
         Robot(double wheelSize, double trackWidth);
-        Robot();
+        Robot(Drivetrain drivetrain);
 
         //Custom Functions
-        Pose getRobotPose(){
-            return Pose(0, 0, 0);
+        void setStartingPose(double x, double y, double theta){
+            startingPose = Pose(x, y, theta);
         }
 
+        Pose getStartingPose(){
+            return startingPose;
+        }
+
+        Pose getCurrentPose(){
+            return startingPose;
+        }
+
+        
     private:
-        double WHEEL_SIZE = 0;
-        double TRACK_WIDTH = 0;
+        Pose startingPose;
+        double WHEEL_SIZE;
+        double TRACK_WIDTH;
 };
 }
