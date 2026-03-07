@@ -16,4 +16,5 @@ double Point::getHeadingRadians(Point a, Point b) const {
 double Point::getHeadingDegrees(Point a, Point b) const {
     return atan((b.getY() - a.getY()) / (b.getX() - a.getX())) * (180 / M_PI);
 }
+
 }
