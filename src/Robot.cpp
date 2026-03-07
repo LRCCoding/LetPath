@@ -9,12 +9,9 @@ Robot::Robot(double wheelSize, double trackWidth) : WHEEL_SIZE(wheelSize), TRACK
 
 void moveToPoint(double x, double y, double theta){
     Point target(x, y);
-    
 }
 
 void moveToPosition(double x, double y, double theta){
     Pose target(x, y, theta);
 }
-
-void moveToPosition(){
 }
